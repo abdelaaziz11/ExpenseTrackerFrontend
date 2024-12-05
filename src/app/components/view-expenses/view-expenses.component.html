@@ -1,0 +1,41 @@
+<div style="display: flex;">
+  <div class="container">
+    <h2>Liste des Dépenses</h2>
+  
+    <!-- Message d'avertissement si le budget est dépassé -->
+    <p class="warning" *ngIf="isExceeded">
+      ⚠️ Attention : Vous avez dépassé votre budget mensuel !
+    </p>
+  
+    <!-- Informations sur les dépenses totales -->
+    <p class="info">
+      Total des dépenses actuelles : {{ totalExpenses }} €
+    </p>
+    <p class="info">
+      Budget actuel : {{ currentBudget }} €
+    </p>
+  
+    <!-- Liste des dépenses -->
+    <ul>
+      <li *ngFor="let expense of expenses">
+        {{ expense.title }} ({{ expense.category }}) - {{ expense.amount }} €
+        <button (click)="deleteExpense(expense.id)">Supprimer</button>
+      </li>
+    </ul>
+  </div>
+  <div class="container">
+    <h2>Chart Graphique</h2>
+  
+    <!-- Message d'avertissement si le budget est dépassé -->
+    <p class="warning" *ngIf="isExceeded">
+      ⚠️ Attention : Vous avez dépassé votre budget mensuel !
+    </p>
+    <!-- Graphique -->
+    <div class="chart-container">
+      <canvas #doughnutChart></canvas>
+    </div>
+  
+  </div>
+  
+  
+</div>

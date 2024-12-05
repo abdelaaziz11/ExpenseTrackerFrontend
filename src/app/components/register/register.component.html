@@ -1,0 +1,20 @@
+<div class="container register">
+    <h2>Inscription</h2>
+    <form (ngSubmit)="register()">
+      <input
+        type="email"
+        [(ngModel)]="email"
+        name="email"
+        placeholder="Email"
+      />
+      <input
+        type="password"
+        [(ngModel)]="password"
+        name="password"
+        placeholder="Mot de passe"
+      />
+      <button type="submit">Inscription</button>
+    </form>
+    <a routerLink="/login">Déjà inscrit ?</a>
+  </div>
+  

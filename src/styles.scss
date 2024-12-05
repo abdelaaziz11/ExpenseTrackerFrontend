@@ -1,0 +1,74 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5dc; /* Beige clair */
+  color: #2f4f4f; /* Vert foncé */
+}
+
+.container {
+  max-width: 400px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #8b4513; /* Bordure marron subtile */
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: #2f4f4f;
+  text-align: center;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  font-size: 1rem;
+  color: white;
+  background: #8b4513; /* Marron */
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #a0522d; /* Marron plus clair */
+}
+
+input[type="email"],
+input[type="password"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #8b4513; /* Marron */
+}
+
+a {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+  color: #2f4f4f; /* Vert foncé */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #8b4513; /* Marron */
+}

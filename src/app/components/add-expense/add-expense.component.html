@@ -1,0 +1,15 @@
+<div class="container">
+    <h2>Ajouter une dépense</h2>
+    <form (ngSubmit)="addExpense()">
+      <input type="text" [(ngModel)]="title" name="title" placeholder="Titre" required />
+      <select [(ngModel)]="category" name="category" required>
+        <option value="" disabled selected>Catégorie</option>
+        <option value="Food">Alimentation</option>
+        <option value="Transport">Transport</option>
+        <option value="Entertainment">Divertissement</option>
+      </select>
+      <input type="number" [(ngModel)]="amount" name="amount" placeholder="Montant" required />
+      <button type="submit">Ajouter</button>
+    </form>
+  </div>
+  

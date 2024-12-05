@@ -1,0 +1,34 @@
+<div class="container">
+    <h2>Définir le Budget Mensuel</h2>
+  
+    <form (ngSubmit)="setBudget()">
+      <div class="form-group">
+        <label for="budget">
+          Budget (€) : Actuel : <strong>{{ currentBudget || 0 }}</strong>
+        </label>
+        <input
+          type="number"
+          [(ngModel)]="budget"
+          name="budget"
+          id="budget"
+          class="form-control"
+          placeholder="Saisir votre nouveau budget"
+          required
+        />
+      </div>
+  
+      <button type="submit" class="btn btn-primary">Définir le Budget</button>
+    </form>
+  
+    <!-- Message de confirmation ou erreur -->
+    <p class="message success" *ngIf="message && !isExceeded">{{ message }}</p>
+    <p class="message error" *ngIf="isExceeded">
+      ⚠️ Attention : Vous avez dépassé votre budget mensuel !
+    </p>
+  
+    <!-- Affichage du total des dépenses -->
+    <div class="info-box">
+      <p>Total des dépenses actuelles : <strong>{{ totalExpenses || 0 }} €</strong></p>
+    </div>
+  </div>
+  

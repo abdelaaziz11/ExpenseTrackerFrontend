@@ -1,0 +1,14 @@
+<nav class="navbar">
+
+  <ul>
+    <li><a routerLink="/dashboard/view-expenses">Voir les Dépenses</a></li>
+    <li><a routerLink="/dashboard/add-expense">Ajouter une Dépense</a></li>
+    <li><a routerLink="/dashboard/set-budget">Définir un Budget</a></li>
+ 
+  </ul>
+  <li><button (click)="logout()">Déconnexion</button></li>
+</nav>
+
+<div class="dashboard-content">
+  <router-outlet></router-outlet>
+</div>
