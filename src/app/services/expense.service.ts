@@ -38,13 +38,16 @@ export class ExpenseService {
     return this.expensesSubject.asObservable();
   }
 
-  // Ajouter une dépense
   addExpense(expense: Expense): void {
     this.http.post<Expense>(this.apiUrl, expense).subscribe((newExpense) => {
+      // Récupère la liste actuelle des dépenses
       const currentExpenses = this.expensesSubject.value;
+  
+      // Ajoute la nouvelle dépense dans le BehaviorSubject
       this.expensesSubject.next([...currentExpenses, newExpense]);
     });
   }
+  
 
   // Supprimer une dépense
   deleteExpense(id: string): void {

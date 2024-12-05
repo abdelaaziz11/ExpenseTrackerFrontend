@@ -16,6 +16,8 @@ import { AddExpenseComponent } from './components/add-expense/add-expense.compon
 import { ViewExpensesComponent } from './components/view-expenses/view-expenses.component';
 import { SetBudgetComponent } from './components/set-budget/set-budget.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -35,6 +37,8 @@ import { HttpClientModule } from '@angular/common/http';
     provideAuth(() => getAuth()), // Fournir Auth
     provideFirestore(() => getFirestore()), // Fournir Firestore
     HttpClientModule,
+    MatSnackBarModule,
+    BrowserAnimationsModule,
 
   ],
   providers: [],

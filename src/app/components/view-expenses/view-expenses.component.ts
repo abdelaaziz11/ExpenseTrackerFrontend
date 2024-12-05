@@ -20,18 +20,18 @@ export class ViewExpensesComponent implements OnInit, AfterViewInit {
   constructor(private expenseService: ExpenseService) {}
 
   ngOnInit() {
-    // Souscrire pour obtenir les dépenses
-    this.expenseService.getExpenses().subscribe((expenses: Expense[]) => {
-      this.expenses = expenses;
-      this.calculateTotalExpenses(); // Recalcule les dépenses totales
-      this.updateChart(); // Met à jour le graphique
-    });
+  // S'abonner aux dépenses pour recevoir les mises à jour en temps réel
+  this.expenseService.getExpenses().subscribe((expenses) => {
+    this.expenses = expenses;
+    this.totalExpenses = expenses.reduce((sum, exp) => sum + exp.amount, 0);
+    this.updateChart(); // Met à jour le graphique
+  });
 
-    // Souscrire pour obtenir le budget
-    this.expenseService.getBudget().subscribe((budget: number) => {
-      this.currentBudget = budget;
-      this.updateChart(); // Met à jour le graphique
-    });
+  // Charger le budget
+  this.expenseService.getBudget().subscribe((budget) => {
+    this.currentBudget = budget;
+    this.updateChart(); // Met à jour le graphique
+  });
   }
 
   ngAfterViewInit() {

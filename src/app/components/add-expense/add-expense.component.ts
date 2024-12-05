@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar'; // Importer MatSnackBar
 import { ExpenseService } from '../../services/expense.service';
 import { Expense } from '../../models/expense.model';
-import { v4 as uuidv4 } from 'uuid'; // Installe uuid : npm install uuid
 
 @Component({
   selector: 'app-add-expense',
@@ -13,14 +13,17 @@ export class AddExpenseComponent {
   category = '';
   amount: number | null = null;
 
-  constructor(private expenseService: ExpenseService) {}
+  constructor(
+    private expenseService: ExpenseService,
+    private snackBar: MatSnackBar 
+  ) {}
 
   addExpense() {
     if (!this.title || !this.category || !this.amount) {
-      alert('Veuillez remplir tous les champs.');
+      this.showNotification('Veuillez remplir tous les champs.', 'error');
       return;
     }
-  
+
     const newExpense: Expense = {
       id: '',
       title: this.title,
@@ -28,12 +31,18 @@ export class AddExpenseComponent {
       amount: this.amount,
       date: new Date().toISOString(),
     };
-  
-    this.expenseService.addExpense(newExpense); // Appelle le service sans `then`
-    alert('Dépense ajoutée avec succès !');
+
+    this.expenseService.addExpense(newExpense);
+    this.showNotification('Dépense ajoutée avec succès !', 'success');
     this.title = '';
     this.category = '';
     this.amount = null;
   }
-  
+
+  private showNotification(message: string, type: 'success' | 'error'): void {
+    this.snackBar.open(message, 'Fermer', {
+      duration: 3000, 
+      panelClass: type === 'success' ? 'snackbar-success' : 'snackbar-error',
+    });
+  }
 }

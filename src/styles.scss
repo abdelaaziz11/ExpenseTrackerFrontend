@@ -45,8 +45,9 @@ input[type="email"],
 input[type="password"],
 input[type="number"],
 select {
-  width: 100%;
+  width: 90%;
   padding: 10px;
+  margin-top: 10px;
   margin-bottom: 15px;
   font-size: 1rem;
   border: 1px solid #ddd;
@@ -72,3 +73,17 @@ a:hover {
   text-decoration: underline;
   color: #8b4513; /* Marron */
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.snackbar-success {
+  background-color: #4caf50; // Vert pour les succès
+  color: white;
+}
+
+.snackbar-error {
+  background-color: #f44336; // Rouge pour les erreurs
+  color: white;
+}
+

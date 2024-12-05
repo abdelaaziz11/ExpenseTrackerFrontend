@@ -1,12 +1,12 @@
 export const environment = {
     firebase: {
-        apiKey: "AIzaSyDx7Buepyc86jnCcoLr5a9UcOehWTyCdxs",
-        authDomain: "expense-tracker-6a639.firebaseapp.com",
-        projectId: "expense-tracker-6a639",
-        storageBucket: "expense-tracker-6a639.firebasestorage.app",
-        messagingSenderId: "199990280716",
-        appId: "1:199990280716:web:e4ace6b4bb8fed2d39e429",
-        measurementId: "G-H18WVWNKPE"
+        apiKey: "AIzaSyD0ctrs12eJTpHE_AFyhrWTJA71PkCPrWQ",
+        authDomain: "expense-tracker-3a15b.firebaseapp.com",
+        projectId: "expense-tracker-3a15b",
+        storageBucket: "expense-tracker-3a15b.firebasestorage.app",
+        messagingSenderId: "505065461832",
+        appId: "1:505065461832:web:bdaa20879deaa1dcc8a07d",
+        measurementId: "G-JTDTMWWLCY"
     },
     apiUrl: 'http://localhost:5057/api'
   };
