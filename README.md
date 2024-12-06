@@ -2,7 +2,7 @@
 ---
 
 ## **ExpenseTracker **
-![Screenshot of the project](./ExpenseTrackerPicture.png)
+![Screenshot of the project](/ExpenseTrackerPicture.png)
 
 
 ### **Description**
