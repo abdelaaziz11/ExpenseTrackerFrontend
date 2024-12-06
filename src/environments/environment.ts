@@ -8,6 +8,6 @@ export const environment = {
         appId: "1:505065461832:web:bdaa20879deaa1dcc8a07d",
         measurementId: "G-JTDTMWWLCY"
     },
-    apiUrl: 'http://localhost:5057/api'
+    apiUrl: 'https://exprensetrackerapi-cdg0ewdzd4ddguc3.canadacentral-01.azurewebsites.net/api' 
   };
   

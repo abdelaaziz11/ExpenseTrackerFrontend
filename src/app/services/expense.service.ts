@@ -7,7 +7,7 @@ import { Expense } from '../models/expense.model';
   providedIn: 'root',
 })
 export class ExpenseService {
-  private apiUrl = 'http://localhost:5057/api/expenses'; // URL du backend .NET
+  private apiUrl = 'https://exprensetrackerapi-cdg0ewdzd4ddguc3.canadacentral-01.azurewebsites.net/api/expenses'; // URL du backend .NET
   private expensesSubject = new BehaviorSubject<Expense[]>([]);
   private budgetSubject = new BehaviorSubject<number>(0);
 

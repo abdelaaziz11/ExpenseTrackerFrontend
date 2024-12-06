@@ -15,3 +15,18 @@
     background: #a0522d; /* Marron plus clair */
   }
   
+  .snackbar-success {
+    background-color: #4caf50; // Vert pour les succès
+    color: white;
+    max-width: 30%;
+    margin-left: auto!important;
+    margin-right: auto!important;
+  }
+  
+  .snackbar-error {
+    background-color: #f44336; // Rouge pour les erreurs
+    color: white;
+    max-width: 30%;
+    margin-left: auto!important;
+    margin-right: auto!important;
+  }

@@ -40,7 +40,7 @@ export class AddExpenseComponent {
   }
 
   private showNotification(message: string, type: 'success' | 'error'): void {
-    this.snackBar.open(message, 'Fermer', {
+    this.snackBar.open(message, '', {
       duration: 3000, 
       panelClass: type === 'success' ? 'snackbar-success' : 'snackbar-error',
     });
